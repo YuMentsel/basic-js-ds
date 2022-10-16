@@ -12,12 +12,12 @@ const { NotImplementedError } = require('../extensions/index.js');
  * stack.pop(); // undefined
  *
  */
- 
-class Stack {  
+
+class Stack {
 
   stackList = [];
 
-  push(element) {    
+  push(element) {
     return this.stackList.push(element);
   }
 

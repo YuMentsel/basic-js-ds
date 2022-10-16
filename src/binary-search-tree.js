@@ -18,14 +18,11 @@ class BinarySearchTree {
   }
 
   root() {
-    //throw new NotImplementedError('Not implemented');
     return this.root.data;
 
   }
 
   add(data) {
-    //throw new NotImplementedError('Not implemented');
-    
     this.root = addWithin(this.root, data);
 
     function addWithin(node, data) {
@@ -48,7 +45,6 @@ class BinarySearchTree {
   }
 
   has(data) {
-    //throw new NotImplementedError('Not implemented');
 
     return searchWithin(this.root, data);
 
@@ -68,7 +64,6 @@ class BinarySearchTree {
   }
 
   find(data) {
-    //throw new NotImplementedError('Not implemented');
     return searchWithin(this.root, data);
 
     function searchWithin(node, data) {
@@ -87,7 +82,6 @@ class BinarySearchTree {
   }
 
   remove(data) {
-    //throw new NotImplementedError('Not implemented');
     this.root = removeNode(this.root, data);
 
     function removeNode(node, data) {
@@ -102,40 +96,32 @@ class BinarySearchTree {
         node.right = removeNode(node.right, data);
         return node;
       } else {
-        // equal - should remove this item
         if (!node.left && !node.right) {
-          // put null instead of item
           return null;
         }
 
         if (!node.left) {
-          // set right child instead of item
           node = node.right;
           return node;
         }
 
         if (!node.right) {
-          // set left child instead of item
           node = node.left;
           return node;
         }
 
-        // both children exists for this item
         let minFromRight = node.right;
         while (minFromRight.left) {
           minFromRight = minFromRight.left;
         }
         node.data = minFromRight.data;
-
         node.right = removeNode(node.right, minFromRight.data);
-
         return node;
       }
     }
   }
 
   min() {
-    //throw new NotImplementedError('Not implemented');
     if (!this.root) {
       return;
     }
@@ -149,7 +135,6 @@ class BinarySearchTree {
   }
 
   max() {
-    //throw new NotImplementedError('Not implemented');
     if (!this.root) {
       return;
     }
