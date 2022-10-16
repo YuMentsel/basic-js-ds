@@ -14,7 +14,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 
 class Stack {
-
   stackList = [];
 
   push(element) {
@@ -31,5 +30,5 @@ class Stack {
 }
 
 module.exports = {
-  Stack
+  Stack,
 };
